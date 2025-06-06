@@ -1,0 +1,187 @@
+Traceback (most recent call last):
+  File "run.py", line 141, in <module>
+    exp.train(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 253, in train
+    outputs = self.model(batch_x, None, dec_inp, None, batch_y)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/models/Transformer.py", line 89, in forward
+    dec_out = self.decoder(dec_out, enc_out, x_mask=dec_self_mask, cross_mask=dec_enc_mask)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/Transformer_EncDec.py", line 124, in forward
+    x = layer(x, cross, x_mask=x_mask, cross_mask=cross_mask)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/Transformer_EncDec.py", line 97, in forward
+    x = x + self.dropout(self.self_attention(
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/SelfAttention_Family.py", line 158, in forward
+    out, attn = self.inner_attention(
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/SelfAttention_Family.py", line 35, in forward
+    A = self.dropout(torch.softmax(scale * scores, dim=-1))
+RuntimeError: CUDA out of memory. Tried to allocate 1.01 GiB (GPU 5; 23.69 GiB total capacity; 20.23 GiB already allocated; 773.94 MiB free; 21.39 GiB reserved in total by PyTorch)
+Traceback (most recent call last):
+  File "run.py", line 141, in <module>
+    exp.train(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 253, in train
+    outputs = self.model(batch_x, None, dec_inp, None, batch_y)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/models/Informer.py", line 96, in forward
+    dec_out = self.decoder(dec_out, enc_out, x_mask=dec_self_mask, cross_mask=dec_enc_mask)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/Transformer_EncDec.py", line 124, in forward
+    x = layer(x, cross, x_mask=x_mask, cross_mask=cross_mask)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/Transformer_EncDec.py", line 97, in forward
+    x = x + self.dropout(self.self_attention(
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/SelfAttention_Family.py", line 158, in forward
+    out, attn = self.inner_attention(
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/SelfAttention_Family.py", line 120, in forward
+    scores_top, index = self._prob_QK(queries, keys, sample_k=U_part, n_top=u)
+  File "/home/surb21/1/time2/layers/SelfAttention_Family.py", line 61, in _prob_QK
+    K_sample = K_expand[:, :, torch.arange(L_Q).unsqueeze(1), index_sample, :]
+RuntimeError: CUDA out of memory. Tried to allocate 7.73 GiB (GPU 5; 23.69 GiB total capacity; 13.28 GiB already allocated; 7.56 GiB free; 14.59 GiB reserved in total by PyTorch)
+Traceback (most recent call last):
+  File "run.py", line 145, in <module>
+    exp.test(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 557, in test
+    plt.savefig(self.folder_path + self.args.model  + "/img/" +  + str(dict[j]) + 'ceiling' + ".png")
+TypeError: bad operand type for unary +: 'str'
+Traceback (most recent call last):
+  File "run.py", line 145, in <module>
+    exp.test(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 557, in test
+    plt.savefig(self.folder_path + self.args.model  + "/img/" +  + str(dict[j]) + 'ceiling' + ".png")
+TypeError: bad operand type for unary +: 'str'
+Traceback (most recent call last):
+  File "run.py", line 145, in <module>
+    exp.test(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 557, in test
+    plt.savefig(self.folder_path + self.args.model  + "/img/" +  + str(dict[j]) + 'ceiling' + ".png")
+TypeError: bad operand type for unary +: 'str'
+Traceback (most recent call last):
+  File "run.py", line 145, in <module>
+    exp.test(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 557, in test
+    plt.savefig(self.folder_path + self.args.model  + "/img/" +  + str(dict[j]) + 'ceiling' + ".png")
+TypeError: bad operand type for unary +: 'str'
+Traceback (most recent call last):
+  File "run.py", line 145, in <module>
+    exp.test(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 557, in test
+    plt.savefig(self.folder_path + self.args.model  + "/img/" +  + dict[j] + 'ceiling' + ".png")
+TypeError: bad operand type for unary +: 'str'
+Traceback (most recent call last):
+  File "run.py", line 145, in <module>
+    exp.test(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 557, in test
+    plt.savefig(self.folder_path + self.args.model  + "/img/" +  + dict[j] + 'ceiling' + ".png")
+TypeError: bad operand type for unary +: 'str'
+Traceback (most recent call last):
+  File "run.py", line 145, in <module>
+    exp.test(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 557, in test
+    plt.savefig(self.folder_path + self.args.model  + "/img/" + dict[j] + 'ceiling' + ".png")
+TypeError: bad operand type for unary +: 'str'
+./scripts/myrun.sh: 60: Syntax error: Unterminated quoted string
+Traceback (most recent call last):
+  File "run.py", line 145, in <module>
+    exp.test(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 557, in test
+    #     plt.text(xx, yy, formatted_text, fontsize=13,ha='left', va='top')
+TypeError: bad operand type for unary +: 'str'
+Traceback (most recent call last):
+  File "run.py", line 141, in <module>
+    exp.train(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 337, in train
+    data_rows = [{'loss': r, 'test loss': p} for t, r, p in zip(loss_all, test_loss_all)]
+  File "/home/surb21/1/time2/exp/exp_main.py", line 337, in <listcomp>
+    data_rows = [{'loss': r, 'test loss': p} for t, r, p in zip(loss_all, test_loss_all)]
+ValueError: not enough values to unpack (expected 3, got 2)
+Traceback (most recent call last):
+  File "run.py", line 143, in <module>
+    exp.train(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 270, in train
+    outputs = self.model(batch_x, None, dec_inp, None, batch_y)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/models/Transformer.py", line 89, in forward
+    dec_out = self.decoder(dec_out, enc_out, x_mask=dec_self_mask, cross_mask=dec_enc_mask)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/Transformer_EncDec.py", line 124, in forward
+    x = layer(x, cross, x_mask=x_mask, cross_mask=cross_mask)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/Transformer_EncDec.py", line 109, in forward
+    y = self.dropout(self.activation(self.conv1(y.transpose(-1, 1))))
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/functional.py", line 1168, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+RuntimeError: CUDA out of memory. Tried to allocate 294.00 MiB (GPU 0; 23.69 GiB total capacity; 5.53 GiB already allocated; 174.19 MiB free; 5.89 GiB reserved in total by PyTorch)
+Traceback (most recent call last):
+  File "run.py", line 143, in <module>
+    exp.train(setting)
+  File "/home/surb21/1/time2/exp/exp_main.py", line 270, in train
+    outputs = self.model(batch_x, None, dec_inp, None, batch_y)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/models/Transformer.py", line 89, in forward
+    dec_out = self.decoder(dec_out, enc_out, x_mask=dec_self_mask, cross_mask=dec_enc_mask)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/Transformer_EncDec.py", line 124, in forward
+    x = layer(x, cross, x_mask=x_mask, cross_mask=cross_mask)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/1/time2/layers/Transformer_EncDec.py", line 109, in forward
+    y = self.dropout(self.activation(self.conv1(y.transpose(-1, 1))))
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 58, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/data1/surb21/conda/envs/t2/lib/python3.8/site-packages/torch/nn/functional.py", line 1168, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+RuntimeError: CUDA out of memory. Tried to allocate 220.00 MiB (GPU 0; 23.69 GiB total capacity; 14.50 GiB already allocated; 125.12 MiB free; 14.89 GiB reserved in total by PyTorch)
+Traceback (most recent call last):
+  File "run.py", line 143, in <module>
+    exp.train(setting)
+  File "/data2/surb21/fire-main/exp/exp_main.py", line 270, in train
+    outputs = self.model(batch_x, None, dec_inp, None, batch_y)
+  File "/home/surb21/.conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data2/surb21/fire-main/models/Transformer.py", line 86, in forward
+    enc_out, attns = self.encoder(enc_out, attn_mask=enc_self_mask)
+  File "/home/surb21/.conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data2/surb21/fire-main/layers/Transformer_EncDec.py", line 72, in forward
+    x, attn = attn_layer(x, attn_mask=attn_mask)
+  File "/home/surb21/.conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data2/surb21/fire-main/layers/Transformer_EncDec.py", line 40, in forward
+    new_x, attn = self.attention(
+  File "/home/surb21/.conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data2/surb21/fire-main/layers/SelfAttention_Family.py", line 156, in forward
+    values = self.value_projection(values).view(B, S, H, -1)
+  File "/home/surb21/.conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/surb21/.conda/envs/t2/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/surb21/.conda/envs/t2/lib/python3.8/site-packages/torch/nn/functional.py", line 1848, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: CUDA out of memory. Tried to allocate 60.00 MiB (GPU 0; 23.69 GiB total capacity; 368.51 MiB already allocated; 28.06 MiB free; 378.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

@@ -1,0 +1,30 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python 调试程序: 当前文件",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "run.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--is_training","1",
+                "--model_id","ETTh1_336'_'100",
+                "--model","DLinear",
+                "--features","M",
+                "--seq_len","100",
+                "--pred_len","10",
+                "--enc_in","2",
+                "--folder_path","D:/fire/data/2500/",
+                "--des","Exp",
+                "--itr","1",
+                "--batch_size","32",
+                "--learning_rate","0.005",
+
+            ]
+        }
+    ]
+}
