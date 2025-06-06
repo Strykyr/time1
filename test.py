@@ -42,6 +42,9 @@ parser.add_argument('--seq_len', type=int, default=100, help='input sequence len
 # parser.add_argument('--label_len', type=int, default=25, help='start token length')
 # # 预测的长度
 # parser.add_argument('--pred_len', type=int, default=50, help='prediction sequence length')
+
+
+
 parser.add_argument('--label_len', type=int, default=25, help='start token length')
 # 预测的长度
 parser.add_argument('--pred_len', type=int, default=50, help='prediction sequence length')
